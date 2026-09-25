@@ -27,6 +27,12 @@ pipeline {
                 bat 'python -m pytest application/test_app.py'
             }
         }
+        
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t devsecops-app .'
+            }
+        }
 
     }
 }
