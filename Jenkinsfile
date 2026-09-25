@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                bat 'python -m pip install -r application/requirements.txt'
+            }
+        }
+
         stage('Test') {
             steps {
                 bat 'python -m pytest application/test_app.py'
