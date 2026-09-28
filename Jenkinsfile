@@ -33,11 +33,6 @@ pipeline {
                 bat 'docker build -t devsecops-app .'
             }
         }
-        stage('Docker Build') {
-            steps {
-                bat 'docker build -t devsecops-app .'
-            }
-        }
 
         stage('Deploy') {
             steps {
