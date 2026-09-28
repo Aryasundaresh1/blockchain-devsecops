@@ -4,18 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Build') {
-            steps {
-                bat 'python -m pip install -r application/requirements.txt'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'python -m pip install -r application/requirements.txt'
@@ -27,7 +15,7 @@ pipeline {
                 bat 'python -m pytest application/test_app.py'
             }
         }
-        
+
         stage('Docker Build') {
             steps {
                 bat 'docker build -t devsecops-app .'
@@ -40,7 +28,6 @@ pipeline {
                 bat 'docker run -d --name devsecops-app-container -p 5000:5000 devsecops-app'
             }
         }
-
 
     }
 }
