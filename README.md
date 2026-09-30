@@ -13,39 +13,7 @@ engine, blockchain integration, and deployment enforcement are planned
 next.
 
 ## Current Architecture
-
-``` text
-Code Push to Repository
-        ↓
-CI/CD Pipeline
-        ↓
-Build & Test
-        ↓
-Build/Test Successful?
-   ┌────┴────┐
-  No        Yes
-   ↓          ↓
-Stop      Security Scanning
-Pipeline      │
-              ├── SAST
-              ├── SCA
-              ├── Secrets Detection
-              └── Configuration / Infrastructure Scan
-                         ↓
-                Security Decision Engine
-                         ↓
-                 High-Severity Issue?
-                    ┌────┴────┐
-                   Yes        No
-                    ↓          ↓
-              Block Deployment
-                    │          │
-                    └────┬─────┘
-                         ↓
-                  Blockchain Logging
-                         ↓
-                Deploy Application
-```
+[![Architecture diagram of aryasundaresh1/blockchain-devsecops](https://gitdiagram.com/aryasundaresh1/blockchain-devsecops/diagram.png)](https://gitdiagram.com/aryasundaresh1/blockchain-devsecops?utm_source=readme&utm_medium=picture)
 
 The final pipeline will use blockchain logging to create a
 tamper-evident record of security decisions and pipeline outcomes.
