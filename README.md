@@ -13,7 +13,7 @@ engine, blockchain integration, and deployment enforcement are planned
 next.
 
 ## Current Architecture
-[![Architecture diagram of aryasundaresh1/blockchain-devsecops](https://gitdiagram.com/aryasundaresh1/blockchain-devsecops/diagram.png)](https://gitdiagram.com/aryasundaresh1/blockchain-devsecops?utm_source=readme&utm_medium=picture)
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/aryasundaresh1/blockchain-devsecops?utm_source=readme&utm_medium=badge)
 
 The final pipeline will use blockchain logging to create a
 tamper-evident record of security decisions and pipeline outcomes.
