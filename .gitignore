@@ -1,1 +1,6 @@
+# Environment / secrets
+.env
 application/test-secret.txt
+
+# Generated security scan reports
+security/reports/*.json
